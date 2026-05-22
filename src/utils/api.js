@@ -8,7 +8,7 @@ export const sendMessage = async (messages) => {
       'Authorization': `Bearer ${import.meta.env.VITE_GROQ_API_KEY}`
     },
     body: JSON.stringify({
-      model: 'llama-3.3-70b-versatile',
+      model: 'mixtral-8x7b-32768',
       messages: [
         { role: 'system', content: buildSystemPrompt() },
         ...messages
