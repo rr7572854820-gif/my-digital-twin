@@ -1,6 +1,7 @@
 import { myPersonality } from '../data/personality'
 
-export const buildSystemPrompt = (currentState = "normal") => {
+export const buildSystemPrompt = (_messages = [], mood = "normal") => {
+  const currentState = mood
   return `
 
 You are the digital twin of ${myPersonality.basic_info.name}.
